@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="640" viewBox="0 0 1440 640" role="img" aria-labelledby="t d">
+  <title id="t">sponsor-deal-check</title>
+  <desc id="d">把商单合同要求与实际发布记录本地比对，输出缺口对账报告</desc>
+  <rect width="1440" height="640" fill="#F4F1E8"/>
+  <rect x="0" y="0" width="1440" height="16" fill="#1F6F8B"/>
+  <rect x="72" y="64" width="1296" height="512" rx="8" fill="#171A19"/>
+  <text x="120" y="130" fill="#8FE3D0" font-family="Arial, 'PingFang SC', sans-serif" font-size="22" font-weight="700">CONTRACT vs POSTS, LOCAL RECONCILIATION</text>
+  <text x="120" y="228" fill="#FFFFFF" font-family="Arial, 'PingFang SC', sans-serif" font-size="66" font-weight="800">商单交付对账</text>
+  <text x="120" y="292" fill="#D6D4CB" font-family="Arial, 'PingFang SC', sans-serif" font-size="30">合同要点与发布记录本地比对，缺交付、逾期、必提词缺失、</text>
+  <text x="120" y="338" fill="#D6D4CB" font-family="Arial, 'PingFang SC', sans-serif" font-size="30">保留期倒计时、结款节点状态，一份报告说清能不能收尾款。</text>
+  <g transform="translate(120 408)">
+    <rect width="360" height="120" rx="6" fill="#2A2E2C"/>
+    <text x="24" y="38" fill="#F0C94B" font-family="Arial, 'PingFang SC', sans-serif" font-size="17" font-weight="700">合同要求（deal.json）</text>
+    <text x="24" y="70" fill="#D6D4CB" font-family="Arial, 'PingFang SC', sans-serif" font-size="16">抖音视频 1 条 · 09-05 前 · ≥30s</text>
+    <text x="24" y="96" fill="#D6D4CB" font-family="Arial, 'PingFang SC', sans-serif" font-size="16">小红书图文 2 条 · 09-10 前</text>
+  </g>
+  <text x="516" y="478" fill="#F0C94B" font-family="Arial, 'PingFang SC', sans-serif" font-size="34" font-weight="800">→</text>
+  <g transform="translate(560 408)">
+    <rect width="688" height="120" rx="6" fill="#1F6F8B"/>
+    <text x="24" y="38" fill="#FFFFFF" font-family="Arial, 'PingFang SC', sans-serif" font-size="17" font-weight="700">⚠️ d1｜douyin·视频｜已交付 1/1（真实报告节选）</text>
+    <text x="24" y="70" fill="#CFE8F2" font-family="Arial, 'PingFang SC', sans-serif" font-size="16">[逾期] 发布 2026-09-07 晚于约定 2026-09-05</text>
+    <text x="24" y="96" fill="#CFE8F2" font-family="Arial, 'PingFang SC', sans-serif" font-size="16">[时长不足] 18s &lt; 约定 30s</text>
+  </g>
+  <text x="120" y="572" fill="#555954" font-family="Arial, 'PingFang SC', sans-serif" font-size="18">样例输出取自仓库内真实运行产物 evals/runs_v1/hard_report.md（合成样本）</text>
+</svg>

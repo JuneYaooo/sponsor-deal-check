@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "suite": "sponsor-deal-check-v1",
+  "case_file": "cases_v1.jsonl",
+  "rubric_file": "rubric_v1.md",
+  "layers": {
+    "script_behavior": {
+      "runner": "python3 scripts/reconcile_deal.py 于仓库根目录执行（命令见 docs/usage.md），逐条核对 cases_v1.jsonl 原子检查；日期基准统一 --as-of 2026-09-17 保证可复现",
+      "runs_per_case": 1,
+      "note": "脚本为确定性比对，case b5 显式验证重复运行输出哈希一致"
+    },
+    "agent_workflow": {
+      "runner": "ZCode CLI 中的 Agent 将 agent_brief_v1.md 转写为 deal.json 并解释对账结果，产物随 fixtures 提交",
+      "runs_per_case": 1
+    }
+  },
+  "conditions": ["skill"],
+  "baseline_note": "基线是手工在表格里逐单核对（飞书多维表格/Notion 模板均为人工记录，不做自动比对），无法在同一夹具上自动化复现，故不作 baseline/skill 数值对比。",
+  "judging": {
+    "judge": "开发同一 Agent（GLM / ZCode CLI）自评，标 review_status=model_only",
+    "blind_condition_labels": false,
+    "human_review": "尚未进行独立人工复核，是当前评测的主要限制"
+  },
+  "pass_rule": {
+    "critical_failure_must_be_false": true,
+    "script_layer": "全部原子检查通过",
+    "agent_layer_minimum_mean_dimension_score": 3.0
+  },
+  "current_run": {
+    "status": "completed",
+    "date": "2026-09-17",
+    "model": "GLM（ZCode CLI 内置模型）",
+    "skill_version": "0.1.1",
+    "environment": {
+      "os": "macOS 25.5.0 arm64 (Darwin)",
+      "python": "3.13",
+      "network": "offline（脚本层全程未访问网络）"
+    },
+    "artifacts": [
+      "runs_v1/full_report.md",
+      "runs_v1/full_summary.json",
+      "runs_v1/hard_report.md",
+      "runs_v1/hard_summary.json",
+      "runs_v1/empty_report.md"
+    ]
+  }
+}

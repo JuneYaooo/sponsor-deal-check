@@ -1,0 +1,35 @@
+{
+  "deal": {
+    "brand": "示例品牌（合成样本）",
+    "creator_alias": "博主本人",
+    "fee": 20000,
+    "currency": "CNY",
+    "sign_date": "2026-08-01"
+  },
+  "deliverables": [
+    {
+      "id": "d1",
+      "platform": "douyin",
+      "type": "视频",
+      "count": 1,
+      "due_date": "2026-09-05",
+      "must_mention": ["示例品牌", "秋季上新"],
+      "min_duration_sec": 30,
+      "retention_days": 30
+    },
+    {
+      "id": "d2",
+      "platform": "xiaohongshu",
+      "type": "图文",
+      "count": 2,
+      "due_date": "2026-09-10",
+      "must_mention": ["示例品牌"],
+      "retention_days": 14
+    }
+  ],
+  "payment_milestones": [
+    {"id": "p1", "name": "预付 30%", "amount": 6000, "condition": "manual", "status": "received"},
+    {"id": "p2", "name": "尾款 70%", "amount": 14000, "condition": "delivered_all"},
+    {"id": "p3", "name": "保留期满尾款释放", "amount": 0, "condition": "retention_confirmed"}
+  ]
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="t d">
+  <title id="t">sponsor-deal-check</title>
+  <desc id="d">合同清单与发布记录勾稽比对</desc>
+  <rect width="128" height="128" rx="24" fill="#171A19"/>
+  <rect x="18" y="24" width="44" height="80" rx="8" fill="#D6D4CB"/>
+  <rect x="26" y="36" width="28" height="6" rx="3" fill="#171A19"/>
+  <rect x="26" y="50" width="28" height="6" rx="3" fill="#8A8F8B"/>
+  <rect x="26" y="64" width="28" height="6" rx="3" fill="#8A8F8B"/>
+  <rect x="26" y="78" width="20" height="6" rx="3" fill="#8A8F8B"/>
+  <rect x="66" y="24" width="44" height="80" rx="8" fill="#1F6F8B"/>
+  <path d="M74 40 l6 6 l10 -12" stroke="#8FE3D0" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="74" y="58" width="28" height="6" rx="3" fill="#8FE3D0"/>
+  <path d="M74 76 l6 6 l10 -12" stroke="#F0C94B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="74" y="90" width="22" height="6" rx="3" fill="#8FE3D0"/>
+</svg>

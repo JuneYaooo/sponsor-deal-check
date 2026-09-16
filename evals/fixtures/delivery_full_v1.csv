@@ -1,0 +1,4 @@
+post_id,deliverable_id,platform,type,published_at,url,caption,duration_sec
+post-001,d1,douyin,视频,2026-09-03,https://example.com/video/001,"和示例品牌一起迎接秋季上新，这支视频拍了三遍",45
+post-101,d2,xiaohongshu,图文,2026-09-08,https://example.com/note/101,"示例品牌秋季上新第一波开箱",,
+post-102,d2,xiaohongshu,图文,2026-09-10,https://example.com/note/102,"示例品牌的使用心得和回购清单",,

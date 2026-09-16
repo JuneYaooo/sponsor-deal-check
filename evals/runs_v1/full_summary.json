@@ -1,0 +1,44 @@
+{
+  "version": "0.1.1",
+  "as_of": "2026-09-17",
+  "deliverables": [
+    {
+      "id": "d1",
+      "status": "OK",
+      "required": 1,
+      "delivered": 1,
+      "issues": []
+    },
+    {
+      "id": "d2",
+      "status": "OK",
+      "required": 2,
+      "delivered": 2,
+      "issues": []
+    }
+  ],
+  "unmatched_posts": [],
+  "milestones": [
+    {
+      "id": "p1",
+      "name": "预付 30%",
+      "amount": 6000,
+      "condition": "manual",
+      "state": "已收到"
+    },
+    {
+      "id": "p2",
+      "name": "尾款 70%",
+      "amount": 14000,
+      "condition": "delivered_all",
+      "state": "达成·可申请"
+    },
+    {
+      "id": "p3",
+      "name": "保留期满尾款释放",
+      "amount": 0,
+      "condition": "retention_confirmed",
+      "state": "达成·可申请"
+    }
+  ]
+}

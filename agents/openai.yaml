@@ -1,0 +1,7 @@
+interface:
+  display_name: "商单交付对账"
+  short_description: "合同要求 vs 发布记录，缺口一目了然"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1F6F8B"
+  default_prompt: "Use $sponsor-deal-check to reconcile my brand-deal contract requirements against my actual published posts and show what blocks final payment."

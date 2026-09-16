@@ -1,0 +1,64 @@
+{
+  "version": "0.1.1",
+  "as_of": "2026-09-17",
+  "deliverables": [
+    {
+      "id": "d1",
+      "status": "WARN",
+      "required": 1,
+      "delivered": 1,
+      "issues": [
+        {
+          "kind": "逾期",
+          "post": "post-001",
+          "detail": "发布 2026-09-07 晚于约定 2026-09-05"
+        },
+        {
+          "kind": "时长不足",
+          "post": "post-001",
+          "detail": "18s < 约定 30s"
+        }
+      ]
+    },
+    {
+      "id": "d2",
+      "status": "PARTIAL",
+      "required": 2,
+      "delivered": 1,
+      "issues": [
+        {
+          "kind": "必提词缺失",
+          "post": "-",
+          "detail": "「示例品牌」未出现在任何已发布文案",
+          "blocking": true
+        }
+      ]
+    }
+  ],
+  "unmatched_posts": [
+    "post-201"
+  ],
+  "milestones": [
+    {
+      "id": "p1",
+      "name": "预付 30%",
+      "amount": 6000,
+      "condition": "manual",
+      "state": "已收到"
+    },
+    {
+      "id": "p2",
+      "name": "尾款 70%",
+      "amount": 14000,
+      "condition": "delivered_all",
+      "state": "未达成（存在缺失交付）"
+    },
+    {
+      "id": "p3",
+      "name": "保留期满尾款释放",
+      "amount": 0,
+      "condition": "retention_confirmed",
+      "state": "达成·可申请"
+    }
+  ]
+}
