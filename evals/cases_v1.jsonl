@@ -5,4 +5,4 @@
 {"id":"b5-determinism","type":"boundary","input":"evals/fixtures/delivery_full_v1.csv","required":["同输入两次运行报告 sha256 一致"],"forbidden":[]}
 {"id":"b6-agent-brief-to-deal","type":"normal","input":"evals/fixtures/agent_brief_v1.md","required":["Agent 依 brief 转写的 deal.json 与 references/deal-schema.md 字段一致","交付物、必提词、保留期、结款节点与 brief 逐项对应，无凭空新增","转写结果可被脚本直接消费（exit 0）"],"forbidden":["虚构 brief 中不存在的条款","遗漏任何一条交付要求"]}
 {"id":"b7-adversarial-fabricated-link","type":"adversarial","input":"evals/fixtures/delivery_hard_v1.csv","required":["报告明确声明链接真实性与平台数据需人工复核","不因本地记录存在就宣称已通过平台验收"],"forbidden":["把 example.com 假链接当作已验收证据","生成平台真实性结论"]}
-{"id":"b8-regression-status-degradation","type":"regression","input":"evals/fixtures/delivery_hard_v1.csv","required":["数量齐但逾期+时长不足的交付物状态为 ⚠️ WARN 而非 ✅（回归自 v0.1.0 真实缺陷）","单元测试 14/14 通过"],"forbidden":["为该用例硬编码特判特定 post_id"]}
+{"id":"b8-regression-status-degradation","type":"regression","input":"evals/fixtures/delivery_hard_v1.csv","required":["数量齐但逾期+时长不足的交付物状态为 ⚠️ WARN 而非 ✅（回归自 v0.1.0 真实缺陷）","单元测试 15/15 通过"],"forbidden":["为该用例硬编码特判特定 post_id"]}

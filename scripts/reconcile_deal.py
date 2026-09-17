@@ -21,7 +21,7 @@ import sys
 from datetime import date, timedelta
 from pathlib import Path
 
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 
 DELIVERY_COLUMNS = ["post_id", "deliverable_id", "platform", "type", "published_at", "url", "caption", "duration_sec"]
 CLOSEOUT_CHECKLIST = [
@@ -219,8 +219,13 @@ def build_report(deal: dict, checks: list[dict], unmatched: list[dict],
         lines.append(f"### {mark} {check['id']}｜{check['platform']}·{check['type']}"
                      f"｜已交付 {check['delivered']}/{check['required']}｜约定期 {check['due_date']}")
         lines.append("")
-        if check["status"] != "OK":
-            lines.append(f"- 交付缺口：{'缺少 ' + str(check['required'] - check['delivered']) + ' 条' if check['delivered'] else '完全未交付'}")
+        if check["delivered"] < check["required"]:
+            gap = check["required"] - check["delivered"]
+            lines.append(f"- 交付缺口：{'缺少 ' + str(gap) + ' 条' if check['delivered'] else '完全未交付'}")
+        if check["status"] == "WARN":
+            lines.append("- 数量已齐，但存在以下瑕疵（不阻塞结款，建议向品牌方说明）：")
+        elif check["status"] == "BLOCKED":
+            lines.append("- 数量已齐，但存在验收阻塞项，结款条件不达成：")
         if not check["issues"] and check["status"] == "OK":
             lines.append("- 必提词、时长、时限均符合约定。")
         for issue in check["issues"]:
